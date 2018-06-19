@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="491.0" prefWidth="600.0" stylesheets="@tabela-padrao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.CompStructController">
+   <children>
+      <VBox layoutX="56.0" layoutY="72.0" prefHeight="200.0" prefWidth="471.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane maxHeight="30.0" minHeight="30.0" prefHeight="30.0">
+               <children>
+                  <Button fx:id="bComp" mnemonicParsing="false" onAction="#comparar" text="Comparar">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="bInvert" mnemonicParsing="false" onAction="#invert" prefHeight="25.0" prefWidth="45.0" style="-fx-graphic: url(&quot;/images/gnome_session_switch.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="2" />
+                  <Label fx:id="lDe" prefHeight="17.0" prefWidth="279.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="lPara" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="565.0" textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="15.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="100.0" minWidth="100.0" percentWidth="20.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" percentWidth="35.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="95.0" minWidth="10.0" percentWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" minWidth="100.0" percentWidth="35.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Pane maxHeight="30.0" minHeight="30.0" prefHeight="30.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="13.0" text="Alterações" />
+               </children>
+            </Pane>
+            <GridPane VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="531.0" />
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <TableView fx:id="tAlter" onMouseClicked="#tableClick" prefHeight="200.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="NEVER" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="ckSelect" mnemonicParsing="false" onAction="#select" selected="true" />
+                        <Button fx:id="bSql" mnemonicParsing="false" onAction="#showSql" prefHeight="25.0" prefWidth="40.0" style="-fx-graphic: url(&quot;/images/file-sql.png&quot;);" GridPane.rowIndex="2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <Pane maxHeight="30.0" minHeight="30.0" prefHeight="30.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="13.0" text="DDL" />
+               </children>
+            </Pane>
+            <GridPane VBox.vgrow="ALWAYS">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="531.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="bExecDDL" disable="true" mnemonicParsing="false" onAction="#execDDL" prefHeight="25.0" prefWidth="40.0" style="-fx-graphic: url(&quot;/images/Sql-runner.png&quot;);" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextArea fx:id="taSql" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </GridPane>
+            <Label fx:id="lStatus" prefHeight="17.0" prefWidth="541.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

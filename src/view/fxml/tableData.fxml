@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="282.0" prefWidth="600.0" stylesheets="@tabela-padrao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.TableDataController">
+   <children>
+      <GridPane layoutX="10.0" layoutY="10.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="243.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="bRefresh" mnemonicParsing="false" onAction="#atualizar" style="-fx-graphic: url(&quot;/images/Refresh-icon.png&quot;);" stylesheets="@btn-icon.css" />
+            <Button fx:id="bOrder" mnemonicParsing="false" onAction="#ordenar" style="-fx-graphic: url(&quot;/images/sort-ascending-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="2" />
+            <Button fx:id="bFilter" mnemonicParsing="false" onAction="#filtrar" style="-fx-graphic: url(&quot;/images/filter-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="1" />
+            <Label fx:id="lRes" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="506.0" textAlignment="RIGHT" GridPane.columnIndex="6" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="lOrder" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="506.0" textAlignment="RIGHT" GridPane.columnIndex="5" />
+            <Label fx:id="lWhere" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="506.0" textAlignment="RIGHT" GridPane.columnIndex="4" />
+            <Button fx:id="bInsertCmd" mnemonicParsing="false" onAction="#genInsertCmd" style="-fx-graphic: url(&quot;/images/table-row-insert-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="3" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="189.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="178.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="122.0" prefWidth="144.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TableView fx:id="table" editable="true" layoutY="30.0" onKeyPressed="#tableKeyPressed" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+   </children>
+</AnchorPane>

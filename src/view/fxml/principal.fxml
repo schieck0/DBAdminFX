@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.PrincipalController">
+   <children>
+      <SplitPane dividerPositions="0.3336673346693387" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxWidth="600.0" minHeight="0.0" minWidth="200.0" prefHeight="160.0" prefWidth="400.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <VBox layoutX="89.0" layoutY="23.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <GridPane maxHeight="28.0" minHeight="28.0" prefHeight="28.0" prefWidth="243.0" VBox.vgrow="NEVER">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="bAddServer" mnemonicParsing="false" onAction="#addServer" style="-fx-graphic: url(&quot;/images/database-connect-icon.png&quot;);" stylesheets="@btn-icon.css" />
+                              <Button fx:id="bSqlLog" mnemonicParsing="false" onAction="#showSqlLog" style="-fx-graphic: url(&quot;/images/file-extension-log-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="2" />
+                              <Button fx:id="bRefreshItem" mnemonicParsing="false" onAction="#refreshTreeItem" style="-fx-graphic: url(&quot;/images/Refresh-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="1" />
+                              <Button fx:id="bCompareStruct" disable="true" mnemonicParsing="false" onAction="#compareStruct" style="-fx-graphic: url(&quot;/images/databases.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="3" />
+                              <Button fx:id="bCompareData" disable="true" mnemonicParsing="false" onAction="#compareData" style="-fx-graphic: url(&quot;/images/data-table-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="4" />
+                              <Button fx:id="bImportData" disable="true" mnemonicParsing="false" onAction="#importData" style="-fx-graphic: url(&quot;/images/table_go.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="5" />
+                              <Button fx:id="bSql" disable="true" mnemonicParsing="false" onAction="#openSqlEditor" style="-fx-graphic: url(&quot;/images/table_lightning.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="6" />
+                              <Button fx:id="bModeler" mnemonicParsing="false" onAction="#openModeler" style="-fx-graphic: url(&quot;/images/diagram-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="7" />
+                           </children>
+                        </GridPane>
+                        <TreeView fx:id="tree" onMouseClicked="#treeClick" prefHeight="610.0" prefWidth="296.0" showRoot="false" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane fx:id="tabbedPane" layoutX="53.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+.button,.menu-button {
+    -fx-background-color:transparent;
+}
+
+.button:hover,.menu-button:hover {
+    -fx-background-color: #cccccc!important;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6), 3, 0.0 , 0 , 1 );
+}
+
+.button:pressed,.menu-button:pressed {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3), 1, 0.0 , 0 , 0.5 );
+}
+
+.menu-button > .arrow-button {
+    -fx-padding: 0;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-padding: 0;
+}

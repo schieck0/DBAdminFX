@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="445.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.BackupController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="87.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab closable="false" text="Backup">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="422.0" prefWidth="794.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Banco" AnchorPane.leftAnchor="10.0" />
+                        <Label fx:id="lBanco" layoutX="71.0" layoutY="14.0" prefHeight="17.0" prefWidth="713.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" />
+                        <Label layoutX="14.0" layoutY="45.0" text="Arquivo" AnchorPane.leftAnchor="10.0" />
+                        <TextField fx:id="tfLocal" editable="false" layoutX="104.0" layoutY="41.0" prefHeight="25.0" prefWidth="650.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="10.0" />
+                        <Button layoutX="70.0" layoutY="41.0" maxHeight="25.0" maxWidth="24.0" minHeight="25.0" minWidth="24.0" mnemonicParsing="false" onAction="#openSaveDialog" prefHeight="25.0" prefWidth="24.0" text="..." AnchorPane.leftAnchor="70.0" />
+                        <Label layoutX="14.0" layoutY="82.0" text="Formato" AnchorPane.leftAnchor="10.0" />
+                        <TextField fx:id="tfParams" layoutX="71.0" layoutY="115.0" prefHeight="25.0" prefWidth="715.0" text="--encoding UTF8 --inserts --blobs --column-inserts --verbose" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" />
+                        <Button fx:id="bBackup" layoutX="16.0" layoutY="149.0" mnemonicParsing="false" onAction="#backup" text="Backup" AnchorPane.leftAnchor="10.0" />
+                        <TextArea fx:id="taLog" editable="false" layoutX="14.0" layoutY="185.0" prefHeight="221.0" prefWidth="774.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="185.0" />
+                        <Label fx:id="lPgDump" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="594.0" layoutY="153.0" onMouseClicked="#selPgDumpFile" prefHeight="17.0" prefWidth="186.0" text="PG_DUMP" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" />
+                        <CheckBox fx:id="ckStruct" layoutX="238.0" layoutY="82.0" mnemonicParsing="false" onAction="#ckStructAct" text="Apenas Estrutura" AnchorPane.leftAnchor="240.0" />
+                        <CheckBox fx:id="ckData" layoutX="371.0" layoutY="82.0" mnemonicParsing="false" onAction="#ckDataAct" text="Apenas Dados" AnchorPane.leftAnchor="371.0" />
+                        <ComboBox fx:id="cbFormat" layoutX="71.0" layoutY="78.0" prefWidth="150.0" AnchorPane.leftAnchor="70.0" />
+                        <Label layoutX="15.0" layoutY="119.0" text="Params" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Objetos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TreeTableView fx:id="tObjs" layoutX="100.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" showRoot="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

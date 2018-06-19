@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.fxmisc.richtext.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="400.0" prefWidth="657.0" stylesheets="@tabela-padrao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.SqlController">
+   <children>
+      <VBox layoutX="154.0" layoutY="34.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.4076086956521739" orientation="VERTICAL" prefHeight="341.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane fx:id="splitSqlParam" dividerPositions="0.7519142419601837" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                     <VBox alignment="TOP_CENTER" prefHeight="147.0" prefWidth="655.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <children>
+                                          <GridPane maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="638.0" VBox.vgrow="NEVER">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+                                                <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button fx:id="bOpen" mnemonicParsing="false" onAction="#open" style="-fx-graphic: url(&quot;/images/open-file-icon.png&quot;);" stylesheets="@btn-icon.css" />
+                                                <Button fx:id="bSave" mnemonicParsing="false" onAction="#save" style="-fx-graphic: url(&quot;/images/Save-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="1" />
+                                                <Button fx:id="bExec" mnemonicParsing="false" onAction="#exec" style="-fx-graphic: url(&quot;/images/Play-1-Pressed-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="2" />
+                                                <Button fx:id="bFormat" mnemonicParsing="false" onAction="#format" style="-fx-graphic: url(&quot;/images/format_indent_less.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="3" />
+                                                <Label fx:id="lTime" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="511.0" textAlignment="RIGHT" GridPane.columnIndex="6" GridPane.halignment="RIGHT">
+                                                   <GridPane.margin>
+                                                      <Insets right="15.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Button fx:id="bComment" mnemonicParsing="false" onAction="#comment" style="-fx-graphic: url(&quot;/images/Comment-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="4" />
+                                                <Button fx:id="bExport" mnemonicParsing="false" onAction="#export" style="-fx-graphic: url(&quot;/images/table_export.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="5" />
+                                             </children>
+                                          </GridPane>
+                                            
+                                       <CodeArea fx:id="taSql" layoutX="40.0" layoutY="-26.0" onKeyPressed="#taSqlKeyPress" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS" />
+                                          <HBox alignment="CENTER_RIGHT" maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="655.0" VBox.vgrow="NEVER">
+                                             <children>
+                                                <Label fx:id="lSelect" alignment="CENTER_RIGHT" layoutX="525.0" layoutY="4.0" prefHeight="17.0" prefWidth="208.0" textAlignment="RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                        </children>
+                                     </VBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="307.0" SplitPane.resizableWithParent="false">
+                                 <children>
+                                    <VBox layoutX="59.0" layoutY="-8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <GridPane maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="638.0" VBox.vgrow="NEVER">
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="81.0" text="Parâmetros">
+                                                   <GridPane.margin>
+                                                      <Insets left="5.0" />
+                                                   </GridPane.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="ALWAYS" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                          <TableView fx:id="tParams" editable="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                              <TableColumn fx:id="colParamName" editable="false" maxWidth="1.7976931348623157E308" prefWidth="86.0" text="Nome" />
+                                              <TableColumn fx:id="colParamVal" maxWidth="1.7976931348623157E308" prefWidth="72.0" sortable="false" text="Valor" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <TableView fx:id="table" editable="true" layoutX="124.0" layoutY="8.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

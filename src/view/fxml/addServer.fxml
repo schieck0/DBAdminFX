@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="238.0" prefWidth="487.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.AddServerController">
+   <children>
+      <Pane layoutX="144.0" layoutY="-17.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="12.0" layoutY="14.0" text="Nome" />
+            <TextField fx:id="tfNome" layoutX="75.0" layoutY="10.0" prefHeight="25.0" prefWidth="274.0" />
+            <TextField fx:id="tfHost" layoutX="75.0" layoutY="48.0" prefHeight="25.0" prefWidth="274.0" />
+            <Label layoutX="12.0" layoutY="52.0" text="Endereço" />
+            <Label layoutX="12.0" layoutY="89.0" text="Usuário" />
+            <Label layoutX="12.0" layoutY="126.0" text="Porta" />
+            <Label layoutX="12.0" layoutY="164.0" text="Senha" />
+            <TextField fx:id="tfUser" layoutX="75.0" layoutY="85.0" prefHeight="25.0" prefWidth="274.0" text="postgres" />
+            <TextField fx:id="tfPort" layoutX="75.0" layoutY="122.0" prefHeight="25.0" prefWidth="274.0" text="5432" />
+            <Button fx:id="bOK" layoutX="300.0" layoutY="192.0" mnemonicParsing="false" onAction="#addServer" prefHeight="25.0" prefWidth="49.0" text="OK" />
+            <TextField fx:id="tfPass" layoutX="75.0" layoutY="160.0" prefHeight="25.0" prefWidth="274.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

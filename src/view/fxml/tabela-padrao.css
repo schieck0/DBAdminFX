@@ -1,0 +1,12 @@
+/* 
+    Created on : 01/06/2016, 11:36:06
+    Author     : Rodrigo
+*/
+
+.table-row-cell:empty {
+    -fx-background-color: white;
+} 
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}

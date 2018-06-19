@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.BackupServerController">
+   <children>
+      <Label layoutX="11.0" layoutY="9.0" text="Servidor" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Label fx:id="lServ" layoutX="70.0" layoutY="9.0" prefHeight="17.0" prefWidth="513.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="10.0" />
+      <Label layoutX="11.0" layoutY="38.0" text="Arquivo" AnchorPane.leftAnchor="10.0" />
+      <TextField fx:id="tfLocal" editable="false" layoutX="70.0" layoutY="34.0" prefHeight="25.0" prefWidth="439.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="40.0" />
+      <Button layoutX="566.0" layoutY="34.0" mnemonicParsing="false" onAction="#openSaveDialog" text="..." AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="13.0" layoutY="68.0" text="Params" AnchorPane.leftAnchor="10.0" />
+      <TextField fx:id="tfParams" layoutX="70.0" layoutY="64.0" prefHeight="25.0" prefWidth="440.0" text="--inserts --verbose" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="40.0" />
+      <Button fx:id="bBackup" layoutX="12.0" layoutY="95.0" mnemonicParsing="false" onAction="#backup" text="Backup" AnchorPane.leftAnchor="10.0" />
+      <TextArea fx:id="taLog" editable="false" layoutY="128.0" prefHeight="262.0" prefWidth="580.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="128.0" />
+   </children>
+</AnchorPane>

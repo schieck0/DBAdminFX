@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.RestoreServerController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Servidor" AnchorPane.leftAnchor="10.0" />
+      <Label layoutX="14.0" layoutY="45.0" text="Arquivo" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="lServ" layoutX="72.0" layoutY="14.0" prefHeight="17.0" prefWidth="517.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="tfArquivo" editable="false" layoutX="72.0" layoutY="41.0" prefHeight="25.0" prefWidth="472.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="50.0" />
+      <Button layoutX="562.0" layoutY="41.0" mnemonicParsing="false" onAction="#selectFile" text="..." AnchorPane.rightAnchor="10.0" />
+      <Button fx:id="bRestore" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" onAction="#restore" text="Restore" AnchorPane.leftAnchor="10.0" />
+      <TextArea fx:id="taLog" editable="false" layoutX="14.0" layoutY="115.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="115.0" />
+   </children>
+</AnchorPane>

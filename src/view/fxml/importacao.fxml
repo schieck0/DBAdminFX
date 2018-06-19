@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="204.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.ImportacaoController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="91.0" text="Importando de:" AnchorPane.leftAnchor="14.0" />
+      <Label layoutX="14.0" layoutY="42.0" prefHeight="17.0" prefWidth="41.0" text="Para:" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="tfDe" editable="false" layoutX="118.0" layoutY="10.0" prefHeight="25.0" prefWidth="426.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="10.0" />
+      <TextField fx:id="tfPara" editable="false" layoutX="118.0" layoutY="38.0" prefHeight="25.0" prefWidth="426.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="64.0" />
+      <CheckBox fx:id="ckAtSeq" layoutX="19.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="138.0" selected="true" text="Atualizar Sequence" AnchorPane.leftAnchor="14.0" />
+      <CheckBox fx:id="ckClean" layoutX="209.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="169.0" text="Excluir dados existentes" />
+      <Button fx:id="bImport" layoutX="14.0" layoutY="124.0" mnemonicParsing="false" onAction="#importar" text="Importar" />
+      <Button fx:id="bInvert" layoutX="564.0" layoutY="12.0" mnemonicParsing="false" onAction="#inverter" prefHeight="52.0" prefWidth="41.0" style="-fx-graphic: url(&quot;/images/Up-Down-icon.png&quot;);" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <ProgressBar fx:id="progress" layoutX="79.0" layoutY="172.0" prefHeight="18.0" prefWidth="392.0" progress="0.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="14.0" />
+      <Label layoutX="14.0" layoutY="173.0" prefHeight="17.0" prefWidth="70.0" text="Progresso:" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+   </children>
+</AnchorPane>

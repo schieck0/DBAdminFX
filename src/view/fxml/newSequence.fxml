@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="view.controller.NewSequenceController">
+   <children>
+      <Button fx:id="bOk" layoutX="24.0" layoutY="97.0" mnemonicParsing="false" onAction="#criarSequence" prefHeight="25.0" prefWidth="81.0" text="OK" />
+      <ComboBox fx:id="cbOwner" layoutX="72.0" layoutY="56.0" prefHeight="25.0" prefWidth="257.0" />
+      <Label layoutX="24.0" layoutY="60.0" text="Owner" />
+      <TextField fx:id="tfNome" layoutX="72.0" layoutY="20.0" prefHeight="25.0" prefWidth="257.0" />
+      <Label layoutX="24.0" layoutY="24.0" text="Nome" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.fxmisc.richtext.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="464.0" prefWidth="631.0" stylesheets="@tabela-padrao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FunctionEditController">
+   <children>
+      <VBox layoutX="238.0" layoutY="70.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="600.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" text="Nome">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="tfNome" layoutX="88.0" layoutY="6.0" prefHeight="25.0" prefWidth="210.0" />
+                  <Label layoutX="316.0" layoutY="10.0" text="Owner">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <ComboBox fx:id="cbOwner" layoutX="374.0" layoutY="7.0" prefHeight="25.0" prefWidth="239.0" />
+               </children>
+            </Pane>
+            <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" text="Linguagem">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="316.0" layoutY="10.0" text="Retorno">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbRet" layoutX="374.0" layoutY="7.0" prefHeight="25.0" prefWidth="239.0" />
+                  <ComboBox fx:id="cbLing" layoutX="90.0" layoutY="8.0" prefHeight="25.0" prefWidth="210.0" />
+               </children>
+            </Pane>
+            <GridPane VBox.vgrow="NEVER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" maxWidth="200.0" minWidth="100.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Definição">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Parâmetros" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="bAdd" mnemonicParsing="false" onAction="#addParam" style="-fx-graphic: url(&quot;/images/add-icon.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="3" />
+                  <Button fx:id="bRemove" mnemonicParsing="false" onAction="#removeParam" style="-fx-graphic: url(&quot;/images/DeleteRed.png&quot;);" stylesheets="@btn-icon.css" GridPane.columnIndex="4" />
+               </children>
+            </GridPane>
+            <SplitPane dividerPositions="0.6645468998410174" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <CodeArea fx:id="taSql" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="tParams" editable="true" layoutX="-6.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="colParamName" prefWidth="105.0" text="Nome" />
+                            <TableColumn fx:id="colParamTip" prefWidth="102.0" text="Tipo" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <HBox alignment="CENTER_RIGHT" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="200.0" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="bOK" mnemonicParsing="false" onAction="#processar" prefHeight="25.0" prefWidth="117.0" style="-fx-graphic: url(&quot;/images/lightning-icon.png&quot;);" text="OK">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
